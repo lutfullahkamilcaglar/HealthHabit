@@ -23,33 +23,6 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                 }
-                
-                if !goalSet {
-                    HStack {
-                        TextField("Enter step goal", text: $stepGoal)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding()
-                            .keyboardType(.numberPad)
-                        
-                        Button(action: {
-                            self.vm.setStepGoal(goal: Int(self.stepGoal) ?? 0)
-                            self.goalSet = true
-                        }) {
-                            Text("Set Goal")
-                        }
-                        .disabled(stepGoal.isEmpty)
-                    }
-                } else {
-                    if let userStepCount = Int(vm.userStepCount), userStepCount >= vm.stepGoal {
-                        Text("Congratulations! You have met your step goal.")
-                            .font(.title)
-                            .foregroundColor(.green)
-                    } else {
-                        Text("You have \(vm.stepGoal - (Int(vm.userStepCount) ?? 0)) steps left to reach your goal.")
-                            .font(.title)
-                            .foregroundColor(.red)
-                    }
-                }
             } else {
                 VStack {
                     Text("Please Authorise Health!")
@@ -63,33 +36,20 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                     .frame(width: 320, height: 55)
-                    .background(Color(.orange))
+                    .background(Color(.blue))
                     .cornerRadius(10)
                 }
             }
             
         }
-        .padding()
-        .onAppear {
-            if !self.vm.isAuthorized {
-                self.vm.healthRequest()
-            }
-            
-            let defaults = UserDefaults.standard
-            if let savedStepCount = defaults.value(forKey: "stepCount") as? String {
-                self.vm.userStepCount = savedStepCount
-            } else {
-                vm.readStepsTakenToday()
-            }
-        }
     }
-}
-
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(HealthHabitViewModel())
+    
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+                .environmentObject(HealthHabitViewModel())
+        }
     }
 }

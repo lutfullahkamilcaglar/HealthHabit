@@ -22,6 +22,12 @@
 		F5D2878F2995BE3D00F053F7 /* HealthHabitWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F5D2878B2995BE3C00F053F7 /* HealthHabitWidget.intentdefinition */; };
 		F5D287902995BE3D00F053F7 /* HealthHabitWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F5D2878B2995BE3C00F053F7 /* HealthHabitWidget.intentdefinition */; };
 		F5D287932995BE3D00F053F7 /* HealthHabitWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F5D2877E2995BE3C00F053F7 /* HealthHabitWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5D28799299B7BD400F053F7 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D28798299B7BD400F053F7 /* AdviceData.swift */; };
+		F5D2879C299B7C8F00F053F7 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D28798299B7BD400F053F7 /* AdviceData.swift */; };
+		F5D2879E299B809100F053F7 /* advice.json in Resources */ = {isa = PBXBuildFile; fileRef = F5D2879D299B809100F053F7 /* advice.json */; };
+		F5D2879F299B809100F053F7 /* advice.json in Resources */ = {isa = PBXBuildFile; fileRef = F5D2879D299B809100F053F7 /* advice.json */; };
+		F5D287A1299B83CE00F053F7 /* DatabaseDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D287A0299B83CE00F053F7 /* DatabaseDefaults.swift */; };
+		F5D287A2299B83CE00F053F7 /* DatabaseDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D287A0299B83CE00F053F7 /* DatabaseDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,9 @@
 		F5D2878B2995BE3C00F053F7 /* HealthHabitWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = HealthHabitWidget.intentdefinition; sourceTree = "<group>"; };
 		F5D2878C2995BE3D00F053F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D2878E2995BE3D00F053F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D28798299B7BD400F053F7 /* AdviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceData.swift; sourceTree = "<group>"; };
+		F5D2879D299B809100F053F7 /* advice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = advice.json; sourceTree = "<group>"; };
+		F5D287A0299B83CE00F053F7 /* DatabaseDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				F5D287852995BE3C00F053F7 /* HealthHabitWidgetBundle.swift */,
+				F5D287A0299B83CE00F053F7 /* DatabaseDefaults.swift */,
+				F5D28798299B7BD400F053F7 /* AdviceData.swift */,
 				F5D287872995BE3C00F053F7 /* HealthHabitWidgetLiveActivity.swift */,
 				F5D287892995BE3C00F053F7 /* HealthHabitWidget.swift */,
+				F5D2879D299B809100F053F7 /* advice.json */,
 				F5D2878B2995BE3C00F053F7 /* HealthHabitWidget.intentdefinition */,
 				F5D2878C2995BE3D00F053F7 /* Assets.xcassets */,
 				F5D2878E2995BE3D00F053F7 /* Info.plist */,
@@ -234,6 +246,7 @@
 			files = (
 				F5D2876F29958BA900F053F7 /* Preview Assets.xcassets in Resources */,
 				F5D2876C29958BA900F053F7 /* Assets.xcassets in Resources */,
+				F5D2879E299B809100F053F7 /* advice.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D2878D2995BE3D00F053F7 /* Assets.xcassets in Resources */,
+				F5D2879F299B809100F053F7 /* advice.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +270,9 @@
 				F5D2876A29958BA800F053F7 /* ContentView.swift in Sources */,
 				F5D2876829958BA800F053F7 /* HealthHabitApp.swift in Sources */,
 				F5D287902995BE3D00F053F7 /* HealthHabitWidget.intentdefinition in Sources */,
+				F5D287A1299B83CE00F053F7 /* DatabaseDefaults.swift in Sources */,
 				F5D2877629958CB800F053F7 /* HealthHabitViewModel.swift in Sources */,
+				F5D28799299B7BD400F053F7 /* AdviceData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D2878A2995BE3C00F053F7 /* HealthHabitWidget.swift in Sources */,
+				F5D287A2299B83CE00F053F7 /* DatabaseDefaults.swift in Sources */,
+				F5D2879C299B7C8F00F053F7 /* AdviceData.swift in Sources */,
 				F5D2878F2995BE3D00F053F7 /* HealthHabitWidget.intentdefinition in Sources */,
 				F5D287862995BE3C00F053F7 /* HealthHabitWidgetBundle.swift in Sources */,
 				F5D287882995BE3C00F053F7 /* HealthHabitWidgetLiveActivity.swift in Sources */,
